@@ -1424,6 +1424,14 @@ knitr::include_graphics("Figures/APP1RESULT.JPG")
 
 # References
 
+* Hyndman, RJ & Athanasopoulos, G 2018, Forecasting: Principles and practice, OTexts.
+
+* Hyndman, RJ & Koehler, AB 2006, ‘Another look at measures of forecast accuracy,’ International journal of forecasting, vol. 22, no. 4, pp. 679–688.
+
+* Panagiotelis, A, Athanasopoulos, G, Gamakumara, P & Hyndman, RJ 2021, ‘Forecast reconciliation: A geometric view with new insights on bias correction,’ International Journal of Forecasting, vol. 37, no. 1, pp. 343–359.
+
+* Killick, R & Eckley, I 2014, ‘Changepoint: An r package for changepoint analysis,’ Journal of statistical software, vol. 58, no. 3, pp. 1–19.
+
 
 ---
 
