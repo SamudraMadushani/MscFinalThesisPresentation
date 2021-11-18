@@ -665,21 +665,6 @@ plot(x,z,type='l',xlab='',ylab='',col='green')
 
 ---
 
-# Change point model for changes in mean
-
-For data $z_{1}, z_{2},\dots, z_{n}$, if change points exist at $\tau_{1}, \tau_{2}, \dots, \tau_{k}$, then 
-
-$$z_{t}=
-    \begin{cases}
-    \mu_{1} &   1\leq t \leq \tau_1 \\ 
-    \mu_2 & \tau_1 < t \leq \tau_2 \\
-    \vdots & \vdots \\
-    \mu_{k+1} & \tau_k < t \leq \tau_{k+1}=n
-    \end{cases}$$
-
-
----
-
 ```{r ,echo=FALSE, out.width = '100%', out.height = '100%',fig.height=9, fig.width=16}
 knitr::include_graphics("Figures/PP18.JPG")
 ```
@@ -1402,12 +1387,14 @@ knitr::include_graphics("Figures/F1.JPG")
 ```
 
 ---
+# Dissemination of Research Output
 
 ```{r ,echo=FALSE,fig.height=8, fig.width=16}
 knitr::include_graphics("Figures/APP1.JPG")
 ```
 
 ---
+# Dissemination of Research Output
 
 ```{r ,echo=FALSE,fig.height=8, fig.width=16}
 knitr::include_graphics("Figures/APP2.JPG")
@@ -1445,6 +1432,8 @@ class: center
 # Thank you!
 
  Slides available: 
+ 
+ https://samudramadushani.github.io/MscFinalThesisPresentation/PPT.html
 
  Forecasting App available :
  

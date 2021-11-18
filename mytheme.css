@@ -1,0 +1,8 @@
+
+.remark-slide-number {
+  font-size: 20pt;
+  top: 14px;
+  right: 8px;
+  color: #1f78b4; /* white */
+  opacity: 1; /* default: 0.5 */
+}
