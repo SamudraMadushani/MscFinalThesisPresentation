@@ -89,7 +89,7 @@ knitr::include_graphics("Figures/F1.JPG")
 
 # Data
 
-* Epidemiological unit, Ministry of Health, Sri Lanka.
+* Epidemiological unit, Ministry of Health, Sri Lanka
 
   *  https://www.epid.gov.lk/web/index.php?option=com_content&view=article&id=148&Itemid=449&lang=en
 
