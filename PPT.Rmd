@@ -82,7 +82,15 @@ knitr::include_graphics("Figures/INT.JPG")
 class: inverse center middle
 
 ```{r ,echo=FALSE,fig.height=9, fig.width=16}
-knitr::include_graphics("Figures/F1.JPG")
+knitr::include_graphics("Figures/SD5.JPG")
+```
+
+---
+
+class: inverse center middle
+
+```{r ,echo=FALSE,fig.height=9, fig.width=16}
+knitr::include_graphics("Figures/SD6.JPG")
 ```
 
 ---
