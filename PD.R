@@ -151,11 +151,16 @@ Dengue_total_dataA<- ts(Dengue_total_dataA, freq=52, start=c(2006,52))
 
 #Aggregated time series (total and training session-FIRST SET)
 aggts_total = thief::tsaggregates(Dengue_total_dataA)
-W<-autoplot(aggts_total[[1]],col="#e7298a") + labs(y = " ",x=" ",title="Weekly")
-BW<-autoplot(aggts_total[[2]],col="#1b9e77") + labs(y = " ",x=" ",title="Bi-weekly")
-M<-autoplot(aggts_total[[3]],col="#d95f02") + labs(y = " ",x=" ",title="Monthly")
-Q<-autoplot(aggts_total[[4]],col="#7570b3") + labs(y = " ",x=" ",title="Quarterly")
-Y<-autoplot(aggts_total[[5]],col="#66a61e") + labs(y = "Counts",x="Week",title="Yearly")
+W<-autoplot(aggts_total[[1]],col="#e7298a") + labs(y = " ",x=" ",title="Weekly series")+
+  ggeasy::easy_center_title()+guides(size=FALSE)
+BW<-autoplot(aggts_total[[2]],col="#1b9e77") + labs(y = " ",x=" ",title="Bi-weekly series")+
+  ggeasy::easy_center_title()+guides(size=FALSE)
+M<-autoplot(aggts_total[[3]],col="#d95f02") + labs(y = " ",x=" ",title="Monthly series")+
+  ggeasy::easy_center_title()+guides(size=FALSE)
+Q<-autoplot(aggts_total[[4]],col="#7570b3") + labs(y = " ",x=" ",title="Quarterly series")+
+  ggeasy::easy_center_title()+guides(size=FALSE)
+Y<-autoplot(aggts_total[[5]],col="#66a61e") + labs(y = "Counts",x="Week",title="Yearly series")+
+  ggeasy::easy_center_title()+guides(size=FALSE)
 #TEM<-(W/BW/M/Q/Y)
 TEM<-(W|BW|M)/(Q|Y)
 library(broom)
@@ -226,14 +231,6 @@ pcsW <- DX %>%
   augment(DX)
 
 
-FBVZW<-pcsW %>%
-  ggplot(aes(x = .fittedPC1, y = .fittedPC2, col = Level, label=Districts)) +
-  geom_point() +
-  theme(aspect.ratio = 1)+
-  geom_text_repel(aes(label=Districts), max.overlaps = Inf)+
-  labs(x="PC1", y = "PC2")
-
-FBVZW<-FBVZW+ theme(legend.position = "bottom",legend.box = "vertical")+scale_color_manual(values = c("#e41a1c","#6a3d9a","#ff7f00"))
 
 FBVZW1<-pcsW %>%
   ggplot(aes(x = .fittedPC1, y = .fittedPC2, col = trend_strength, label=Districts)) +
@@ -249,3 +246,78 @@ FBVZW1<-FBVZW1+ theme(legend.position = "bottom",legend.box = "vertical")+
 #(FBVZW|FBVZW1)
 
 #Wt<-Dengue_Districts%>%dplyr::filter(Province=="Western")%>%autoplot(Counts)
+
+FBVZW<-pcsW %>%
+  ggplot(aes(x = .fittedPC1, y = .fittedPC2, col = Level)) +
+  geom_point(size=5) +
+  theme(aspect.ratio = 1)+
+  labs(x="PC1", y = "PC2",title = "Feature-based visualization for time series of spatial hierarchy")+
+  ggeasy::easy_center_title()+guides(size=FALSE)
+
+FBVZW<-FBVZW+ theme(legend.position = "bottom",legend.box = "vertical")+scale_color_manual(values = c("#e41a1c","#6a3d9a","#ff7f00"))
+
+FBVZW1<-pcsW %>%
+  ggplot(aes(x = .fittedPC1, y = .fittedPC2, col = Level, label=Districts)) +
+  geom_point(size=5) +
+  theme(aspect.ratio = 1)+
+  geom_text_repel(aes(label=Districts), max.overlaps = Inf)+
+  labs(x="PC1", y = "PC2",title = "Feature-based visualization for time series of spatial hierarchy")+
+  ggeasy::easy_center_title()+guides(size=FALSE)
+
+FBVZW1<-FBVZW1+ theme(legend.position = "bottom",legend.box = "vertical")+scale_color_manual(values = c("#e41a1c","#6a3d9a","#ff7f00"))
+
+
+FBVZW2<-pcsW %>%
+  ggplot(aes(x = .fittedPC1, y = .fittedPC2, col = seasonal_strength_year, label=Districts)) +
+  geom_point(aes(size=seasonal_strength_year,col = seasonal_strength_year)) +
+  theme(aspect.ratio = 1)+
+  #geom_text_repel(aes(label=Districts), max.overlaps = Inf)+
+  labs(x="PC1", y = "PC2",title = "Feature-based visualization according to seasonality strength")+scale_color_viridis(option = "A")+
+  ggeasy::easy_center_title()+guides(size = FALSE)
+
+FBVZW2<-FBVZW2+ theme(legend.position = "bottom",legend.box = "vertical")+
+  labs(colour = NULL)
+
+FBVZW3<-pcsW %>%
+  ggplot(aes(x = .fittedPC1, y = .fittedPC2, col = spectral_entropy, label=Districts)) +
+  geom_point(aes(size=spectral_entropy,col = spectral_entropy)) +
+  theme(aspect.ratio = 1)+
+  geom_text_repel(aes(label=Districts), max.overlaps = Inf)+
+  labs(x="PC1", y = "PC2",title = "Feature-based visualization according to spectral entropy")+scale_color_viridis(option = "A")+
+  ggeasy::easy_center_title()+guides(size = FALSE)
+
+FBVZW3<-FBVZW3+ theme(legend.position = "bottom",legend.box = "vertical")+
+  labs(colour = NULL)
+
+FBVZW4<-pcsW %>%
+  ggplot(aes(x = .fittedPC1, y = .fittedPC2, col = spectral_entropy, label=Districts)) +
+  geom_point(aes(size=spectral_entropy,col = spectral_entropy)) +
+  theme(aspect.ratio = 1)+
+  #geom_text_repel(aes(label=Districts), max.overlaps = Inf)+
+  labs(x="PC1", y = "PC2",title = "Feature-based visualization according to spectral entropy")+scale_color_viridis(option = "A")+
+  ggeasy::easy_center_title()+guides(size = FALSE)
+
+FBVZW4<-FBVZW4+ theme(legend.position = "bottom",legend.box = "vertical")+
+  labs(colour = NULL)
+
+FBVZW5<-pcsW %>%
+  ggplot(aes(x = .fittedPC1, y = .fittedPC2, col = acf1, label=Districts)) +
+  geom_point(aes(size=acf1,col = acf1)) +
+  theme(aspect.ratio = 1)+
+  #geom_text_repel(aes(label=Districts), max.overlaps = Inf)+
+  labs(x="PC1", y = "PC2",title = "Feature-based visualization according to acf1")+scale_color_viridis(option = "A")+
+  ggeasy::easy_center_title()+guides(size = FALSE)
+
+FBVZW5<-FBVZW5+ theme(legend.position = "bottom",legend.box = "vertical")+
+  labs(colour = NULL)
+
+FBVZW6<-pcsW %>%
+  ggplot(aes(x = .fittedPC1, y = .fittedPC2, col = n_crossing_points, label=Districts)) +
+  geom_point(aes(size=n_crossing_points,col = n_crossing_points)) +
+  theme(aspect.ratio = 1)+
+  #geom_text_repel(aes(label=Districts), max.overlaps = Inf)+
+  labs(x="PC1", y = "PC2",title = "Feature-based visualization according to crossing points")+scale_color_viridis(option = "A")+
+  ggeasy::easy_center_title()+guides(size = FALSE)
+
+FBVZW6<-FBVZW6+ theme(legend.position = "bottom",legend.box = "vertical")+
+  labs(colour = NULL)
