@@ -248,7 +248,7 @@ knitr::include_graphics("Figures/F9M1.JPG")
 
 # Objectives of Data Visualization
 
-* Identify the patterns associated with time series
+* Identify the spatio-temporal patterns associated with time series
 
 * Dengue outbreak identification
 
@@ -258,7 +258,7 @@ knitr::include_graphics("Figures/F9M1.JPG")
 
 *   Time domain visualization
 
-*   Feature based visualization
+*   Feature-based visualization
 
 *   Change point analysis
 
@@ -344,7 +344,7 @@ $$F_{s}=max\biggl(0,1-\frac{Var(R_{t})}{Var(S_{t}+R_{t})}\biggr)$$
 
 #### Strength of trend
 
-$$F_{s}=max\biggl(0,1-\frac{Var(R_{t})}{Var(T_{t}+R_{t})}\biggr)$$
+$$F_{t}=max\biggl(0,1-\frac{Var(R_{t})}{Var(T_{t}+R_{t})}\biggr)$$
 --
 
 #### Spectral entropy
@@ -370,6 +370,12 @@ $r_{k}$ measures the linear relationship between $y_{t}$ and $y_{t-k}$.
 #### Number of crossing points
 
 * computes the number of times a time series crosses the median.
+
+---
+
+```{r ,echo=FALSE, out.width = '100%', out.height = '100%',fig.height=9, fig.width=16}
+knitr::include_graphics("Figures/RESfea.JPG")
+```
 
 ---
 
