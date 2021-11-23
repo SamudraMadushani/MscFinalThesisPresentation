@@ -210,7 +210,16 @@ knitr::include_graphics("Figures/F8M.JPG")
 ```
 
 ---
-# Functionalities of DISC package
+
+```{r ,echo=FALSE, out.width = '100%', out.height = '100%',fig.height=9, fig.width=16}
+knitr::include_graphics("Figures/FUNDISC1.JPG")
+```
+
+---
+
+```{r ,echo=FALSE, out.width = '100%', out.height = '100%',fig.height=9, fig.width=16}
+knitr::include_graphics("Figures/FUNDISC2.JPG")
+```
 
 ---
 
