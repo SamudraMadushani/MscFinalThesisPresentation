@@ -103,7 +103,7 @@ knitr::include_graphics("Figures/SD6.JPG")
 
 * Format of the table in the Epidemiological Report
 
-```{r figurechapter03, echo=FALSE, fig.align = 'center',message=FALSE, out.width = '90%', out.height = '20%',fig.height=5, fig.width=12}
+```{r figurechapter03, echo=FALSE, fig.align = 'center',message=FALSE, out.width = '100%', out.height = '20%',fig.height=5, fig.width=15}
 knitr::include_graphics("Figures/F3MOD.JPG")
 ```
 
@@ -144,11 +144,8 @@ knitr::include_graphics("Figures/AUTO.JPG")
 
 ---
 
-# Reading PDF files
 
-#### Reading_EpidemiologicalReports function
-
-```{r }
+```{r ,echo=FALSE,results='hide'}
 #' path <- setwd(here::here("pdffiles","2020"))
 #' startdate <- c("2019-12-21","2019-12-27","2019-12-28","2020-01-03","2020-01-04","2020-01-10","2020-01-11","2020-01-17","2020-01-18","2020-01-24","2020-01-25","2020-01-31","2020-02-01","2020-02-07","2020-02-08","2020-02-14","2020-02-15","2020-02-21","2020-02-22","2020-02-28","2020-02-29","2020-03-06","2020-03-07","2020-03-13","2020-03-14","2020-03-20","2020-03-21","2020-03-27","2020-03-28","2020-04-03","2020-04-04","2020-04-10","2020-04-11","2020-04-17","2020-04-18","2020-04-24","2020-04-25","2020-05-01","2020-05-02","2020-05-08","2020-05-09","2020-05-15","2020-05-16","2020-05-22","2020-05-23","2020-05-29","2020-05-30","2020-06-05","2020-06-06","2020-06-12","2020-06-13","2020-06-19","2020-06-20","2020-06-26","2020-06-27","2020-07-03","2020-07-04","2020-07-10","2020-07-11","2020-07-17","2020-07-18","2020-07-24","2020-07-25","2020-07-31","2020-08-01","2020-08-07","2020-08-08","2020-08-14","2020-08-15","2020-08-21","2020-08-22","2020-08-28","2020-08-29","2020-09-04","2020-09-05","2020-09-11","2020-09-12","2020-09-18","2020-09-19","2020-09-25","2020-09-26","2020-10-02","2020-10-03","2020-10-09","2020-10-10","2020-10-16","2020-10-17","2020-10-23","2020-10-24","2020-10-30","2020-10-31","2020-11-06","2020-11-07","2020-11-13","2020-11-14","2020-11-20","2020-11-21","2020-11-27","2020-11-28","2020-12-04","2020-12-05","2020-12-11","2020-12-12","2020-12-18")
 #' year <- c(2019,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020,2020)
@@ -167,19 +164,7 @@ knitr::include_graphics("Figures/AUTO.JPG")
 
 ```
 
----
-
-# Reading PDF files
-
-```{r figurechapter07, echo=FALSE, fig.align = 'center',message=FALSE, out.width = '70%', out.height = '10%',fig.height=5, fig.width=10}
-knitr::include_graphics("Figures/F7.JPG")
-```
-
----
-
-# Reading Excel files
-
-```{r }
+```{r ,echo=FALSE,results='hide'}
 Processed_Data<-function(processed_data_path)
 {
   Disease_Counts_csv <- list.files(path = ".", pattern = NULL, all.files = FALSE,
@@ -194,11 +179,8 @@ Processed_Data<-function(processed_data_path)
 }
 ```
 
----
 
-# DISC (DISease Counts) Package
-
-```{r ,echo=FALSE}
+```{r ,echo=FALSE,results='hide'}
 library(tsibble)
 library(magrittr)
 library(forecast)
@@ -215,16 +197,6 @@ D<-Data_Counts
 D
 ```
 
----
-
-class: inverse center middle
-
-```{r , echo=FALSE, fig.align = 'center',message=FALSE, out.width = '100%', out.height = '100%',fig.height=5, fig.width=10,comment=NA}
-knitr::include_graphics("Figures/DEM.JPG")
-```
-
----
-
 # DISC (DISease Counts) Package
 
 
@@ -236,6 +208,9 @@ knitr::include_graphics("Figures/F8M.JPG")
 #install.packages("remotes")
 #remotes::install_github("SMART-Research/DISC")
 ```
+
+---
+# Functionalities of DISC package
 
 ---
 
