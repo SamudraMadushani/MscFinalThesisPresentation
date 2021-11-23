@@ -6,3 +6,7 @@
   color: #1f78b4; /* white */
   opacity: 1; /* default: 0.5 */
 }
+
+.remark-slide-content {
+  font-size: 23px;
+}

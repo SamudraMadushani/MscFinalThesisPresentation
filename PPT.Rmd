@@ -63,15 +63,15 @@ knitr::include_graphics("Figures/INT.JPG")
 
 ### Main objective
 
-* Forecast dengue incidence in Sri Lanka using Spatio-temporal structure of dengue incidence.
+* Forecast dengue incidence in Sri Lanka using spatio-temporal herarchical structure of dengue incidence.
 
 --
 
 ### Specific objectives
 
-* Introduce a novel feature-based visualization approach to identify properties of time series. 
+* Introduce a novel feature-based visualization approach to identify patterns associated with time series of spatio-temporal structure. 
 
-* Automate the process of reading PDF files.
+* Develop an R software package to automate the process of extracting data from weekly epidemiological PDF reports.
 
 * Identify the reasons for forecasting model performance variations.
 
@@ -103,8 +103,8 @@ knitr::include_graphics("Figures/SD6.JPG")
 
 * Format of the table in the Epidemiological Report
 
-```{r figurechapter03, echo=FALSE, fig.align = 'center',message=FALSE, out.width = '100%', out.height = '40%',fig.height=5, fig.width=10}
-knitr::include_graphics("Figures/F3.JPG")
+```{r figurechapter03, echo=FALSE, fig.align = 'center',message=FALSE, out.width = '90%', out.height = '20%',fig.height=5, fig.width=12}
+knitr::include_graphics("Figures/F3MOD.JPG")
 ```
 
 ---
