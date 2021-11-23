@@ -79,15 +79,12 @@ knitr::include_graphics("Figures/INT.JPG")
 
 ---
 
-class: inverse center middle
-
 ```{r ,echo=FALSE,fig.height=9, fig.width=16}
 knitr::include_graphics("Figures/SD5.JPG")
 ```
 
 ---
 
-class: inverse center middle
 
 ```{r ,echo=FALSE,fig.height=9, fig.width=16}
 knitr::include_graphics("Figures/SD6.JPG")
@@ -223,8 +220,6 @@ knitr::include_graphics("Figures/FUNDISC2.JPG")
 
 ---
 
-class: inverse center middle
-
 ```{r ,echo=FALSE}
 Week<-tsibble::yearweek(D$EndDate)
 Date<-D$EndDate
@@ -245,15 +240,9 @@ DataDengueTEST<- DengueTEST%>%
 ```
 
 
-```{r figurechapter09, echo=FALSE, fig.align = 'center',message=FALSE, out.width = '100%', out.height = '100%',fig.height=5, fig.width=10}
-knitr::include_graphics("Figures/F9M.JPG")
+```{r ,echo=FALSE, out.width = '100%', out.height = '100%',fig.height=9, fig.width=16}
+knitr::include_graphics("Figures/F9M1.JPG")
 ```
-
----
-
-class: inverse center middle
-
-# Data Visualization
 
 ---
 
