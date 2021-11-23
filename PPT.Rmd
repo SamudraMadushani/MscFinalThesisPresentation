@@ -487,25 +487,25 @@ class: inverse center middle
 ---
 
 ```{r ,echo=FALSE, out.width = '100%', out.height = '100%',fig.height=9, fig.width=16}
-knitr::include_graphics("Figures/PP1.JPG")
+knitr::include_graphics("Figures/PP1M.JPG")
 ```
 
 ---
 
 ```{r ,echo=FALSE, out.width = '100%', out.height = '100%',fig.height=9, fig.width=16}
-knitr::include_graphics("Figures/PP2.JPG")
+knitr::include_graphics("Figures/PP2M.JPG")
 ```
 
 ---
 
 ```{r ,echo=FALSE, out.width = '100%', out.height = '100%',fig.height=9, fig.width=16}
-knitr::include_graphics("Figures/PP3.JPG")
+knitr::include_graphics("Figures/PP3M.JPG")
 ```
 
 ---
 
 ```{r ,echo=FALSE, out.width = '100%', out.height = '100%',fig.height=9, fig.width=16}
-knitr::include_graphics("Figures/PP4.JPG")
+knitr::include_graphics("Figures/PP4M.JPG")
 ```
 
 ---
@@ -517,19 +517,19 @@ knitr::include_graphics("Figures/PP5.JPG")
 ---
 
 ```{r ,echo=FALSE, out.width = '100%', out.height = '100%',fig.height=9, fig.width=16}
-knitr::include_graphics("Figures/PP6.JPG")
+knitr::include_graphics("Figures/PP6M.JPG")
 ```
 
 ---
 
 ```{r ,echo=FALSE, out.width = '100%', out.height = '100%',fig.height=9, fig.width=16}
-knitr::include_graphics("Figures/PP7.JPG")
+knitr::include_graphics("Figures/PP7M.JPG")
 ```
 
 ---
 
 ```{r ,echo=FALSE, out.width = '100%', out.height = '100%',fig.height=9, fig.width=16}
-knitr::include_graphics("Figures/PP8.JPG")
+knitr::include_graphics("Figures/PP8M.JPG")
 ```
 
 ---
@@ -547,7 +547,7 @@ knitr::include_graphics("Figures/PP10.JPG")
 ---
 
 ```{r ,echo=FALSE, out.width = '100%', out.height = '100%',fig.height=9, fig.width=16}
-knitr::include_graphics("Figures/PP11.JPG")
+knitr::include_graphics("Figures/PP11M.JPG")
 ```
 
 ---
@@ -559,13 +559,13 @@ knitr::include_graphics("Figures/PP12.JPG")
 ---
 
 ```{r ,echo=FALSE, out.width = '100%', out.height = '100%',fig.height=9, fig.width=16}
-knitr::include_graphics("Figures/PP13.JPG")
+knitr::include_graphics("Figures/PP13M.JPG")
 ```
 
 ---
 
 ```{r ,echo=FALSE, out.width = '100%', out.height = '100%',fig.height=9, fig.width=16}
-knitr::include_graphics("Figures/PP14.JPG")
+knitr::include_graphics("Figures/PP14M.JPG")
 ```
 
 ---
