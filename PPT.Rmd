@@ -602,7 +602,7 @@ fviz_eig(pr1)
 ---
 
 ```{r ,echo=FALSE, out.width = '100%', out.height = '100%',fig.height=9, fig.width=16}
-knitr::include_graphics("Figures/PP16.JPG")
+knitr::include_graphics("Figures/PP16M.JPG")
 ```
 
 ---
@@ -668,17 +668,10 @@ knitr::include_graphics("Figures/PP21.JPG")
 
 ---
 
-class: inverse center middle
 
 ```{r figurechapter09N, echo=FALSE, fig.align = 'center',message=FALSE, out.width = '100%', out.height = '100%',fig.height=5, fig.width=10}
-knitr::include_graphics("Figures/FL1.JPG")
+knitr::include_graphics("Figures/FL1M.JPG")
 ```
-
----
-
-class: inverse center middle
-
-# Forecasting modeling
 
 ---
 
@@ -874,10 +867,9 @@ $$Var(y_{t+h}- \hat{y}_{t}(h))=W_{h}$$
 
 ---
 
-class: inverse center middle
 
 ```{r ,echo=FALSE,fig.height=9, fig.width=16}
-knitr::include_graphics("Figures/FDn2.JPG")
+knitr::include_graphics("Figures/FDn2M.JPG")
 ```
 
 ---
@@ -1340,7 +1332,7 @@ knitr::include_graphics("Figures/TEMAGGRESULTS.JPG")
 class: inverse center middle
 
 ```{r ,echo=FALSE,fig.height=9, fig.width=16}
-knitr::include_graphics("Figures/FDn1.JPG")
+knitr::include_graphics("Figures/FDn1M.JPG")
 ```
 
 ---
@@ -1362,7 +1354,7 @@ knitr::include_graphics("Figures/MPVReason2.JPG")
 ---
 
 ```{r ,echo=FALSE,fig.height=8, fig.width=16}
-knitr::include_graphics("Figures/F1.JPG")
+knitr::include_graphics("Figures/F1M.JPG")
 ```
 
 ---
@@ -1426,6 +1418,11 @@ class: center
  
  https://samudramadushani.shinyapps.io/DengueAPPversion1 
  https://samudramadushani.shinyapps.io/DengueAPPversion2
+ 
+ 
+```{r figurechapterFIN08, echo=FALSE, fig.align = 'center',message=FALSE, out.width = '20%', out.height = '20%',fig.height=3, fig.width=3}
+knitr::include_graphics("Figures/F8M.JPG")
+```
 
 ##### Slides created via xaringan
 

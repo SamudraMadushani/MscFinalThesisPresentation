@@ -197,8 +197,9 @@ TEMFBV3<-hwl_pca %>%
   ggplot(aes(x=.fittedPC1, y=.fittedPC2,label=Series,col=x_acf1))+
   geom_text_repel(aes(label=Series), max.overlaps = Inf)+
   geom_point(aes(col=x_acf1,size=x_acf1))+guides(size = FALSE)+
-  labs(x="PC1", y = "PC2",title = "acf1")+
-  theme(aspect.ratio = 1)
+  labs(x="PC1", y = "PC2",title = "Feature-based visualization for temporal hierarchical series according to acf1 feature")+
+  theme(aspect.ratio = 1)+
+  ggeasy::easy_center_title()+guides(size = FALSE)
 
 TEMFBV4<-hwl_pca %>%
   ggplot(aes(x=.fittedPC1, y=.fittedPC2,label=Series,col=seasonal_strength))+
@@ -316,8 +317,21 @@ FBVZW6<-pcsW %>%
   geom_point(aes(size=n_crossing_points,col = n_crossing_points)) +
   theme(aspect.ratio = 1)+
   #geom_text_repel(aes(label=Districts), max.overlaps = Inf)+
-  labs(x="PC1", y = "PC2",title = "Feature-based visualization according to crossing points")+scale_color_viridis(option = "A")+
+  labs(x="PC1", y = "PC2",title = "Feature-based visualization according to number of crossing points")+scale_color_viridis(option = "A")+
   ggeasy::easy_center_title()+guides(size = FALSE)
 
 FBVZW6<-FBVZW6+ theme(legend.position = "bottom",legend.box = "vertical")+
   labs(colour = NULL)
+
+FBVZW7<-pcsW %>%
+  ggplot(aes(x = .fittedPC1, y = .fittedPC2, col = n_crossing_points, label=Districts)) +
+  geom_point(aes(size=n_crossing_points,col = n_crossing_points)) +
+  theme(aspect.ratio = 1)+
+  geom_text_repel(aes(label=Districts), max.overlaps = Inf)+
+  labs(x="PC1", y = "PC2",title = "Feature-based visualization according to number of crossing points")+scale_color_viridis(option = "A")+
+  ggeasy::easy_center_title()+guides(size = FALSE)
+
+FBVZW7<-FBVZW7+ theme(legend.position = "bottom",legend.box = "vertical")+
+  labs(colour = NULL)
+
+
