@@ -1420,7 +1420,7 @@ class: center
  https://samudramadushani.shinyapps.io/DengueAPPversion2
  
  
-```{r figurechapterFIN08, echo=FALSE, fig.align = 'center',message=FALSE, out.width = '20%', out.height = '20%',fig.height=3, fig.width=3}
+```{r figurechapterFIN08, echo=FALSE, fig.align = 'center',message=FALSE, out.width = '15%', out.height = '15%',fig.height=2, fig.width=2}
 knitr::include_graphics("Figures/F8M.JPG")
 ```
 
