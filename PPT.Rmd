@@ -408,18 +408,18 @@ knitr::include_graphics("Figures/FES2.JPG")
 
 # Principal Component Analysis
 
-* Principal components are new variables that are constructed as linear combinations of the initial variables.
+* Principal components are new variables that are constructed as linear combinations of the initial variables
 
 --
 
 ### Procedure
 
-* Consider that $X_{1}, X_{2},\dots,X_{p}$ as time series features.
+* Consider that $X_{1}, X_{2},\dots,X_{p}$ as time series features
 
 #### Standardization
 
 $$Z=\frac{value-mean}{s.d.}$$
-* $Z_{1}, Z_{2},\dots,Z_{p}$ are the standardized time series features of the time series features $X_{1}, X_{2},\dots,X_{p}$.
+* $Z_{1}, Z_{2},\dots,Z_{p}$ are the standardized time series features of the time series features $X_{1}, X_{2},\dots,X_{p}$
 
 ---
 
@@ -446,7 +446,7 @@ $$
   
 ---
 
-#### New set of variables (Principal components) are obtained as a linear combination of features.
+#### New set of variables (Principal components) are obtained as a linear combination of features
 
 $$Y_{1}=a_{11}X_{1}+a_{12}X_{2}+\dots+a_{1p}X_{p}=a_{1}^{'}X\\$$
 
