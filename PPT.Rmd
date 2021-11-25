@@ -352,9 +352,6 @@ $$F_{t}=max\biggl(0,1-\frac{Var(R_{t})}{Var(T_{t}+R_{t})}\biggr)$$
 * A measure of forecastability of a time series.
 
 $$H_{s}=-\int_{-\pi}^{\pi}\hat{f}_{y}(\lambda)log\hat{f}_{y}(\lambda).d\lambda$$
-where $\hat{f}_{y}$ is an estimate of the spectral density of the data.
-
-* Low value of $H_{s}$ implies that time series is easier to forecast.
 
 ---
 
