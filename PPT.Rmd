@@ -408,18 +408,18 @@ knitr::include_graphics("Figures/FES2.JPG")
 
 # Principal Component Analysis
 
-* Principal components are new variables that are constructed as linear combinations of the initial variables
+* Principal components are new variables that are constructed as linear combinations of the initial variables.
 
 --
 
 ### Procedure
 
-* Consider that $X_{1}, X_{2},\dots,X_{p}$ as time series features
+* Consider that $X_{1}, X_{2},\dots,X_{p}$ as time series features.
 
 #### Standardization
 
 $$Z=\frac{value-mean}{s.d.}$$
-* $Z_{1}, Z_{2},\dots,Z_{p}$ are the standardized time series features of the time series features $X_{1}, X_{2},\dots,X_{p}$
+* $Z_{1}, Z_{2},\dots,Z_{p}$ are the standardized time series features of the time series features $X_{1}, X_{2},\dots,X_{p}$.
 
 ---
 
@@ -440,7 +440,7 @@ $$
 
 #### Compute Eigenvalues and Eigenvectors of covariance matrix
 
-  * Rank the Eigenvalues in descending order $\lambda_{1} \geq \lambda_{2} \geq \lambda_{3} \geq \dots\geq\lambda_{p}\geq0$
+  * Rank the Eigenvalues in descending order $\lambda_{1} \geq \lambda_{2} \geq \lambda_{3} \geq \dots\geq\lambda_{p}\geq0$.
   
   * Corresponding Eigenvectors are $a_{1},a_{2},a_{3},\dots,a_{p}$
   
@@ -680,41 +680,6 @@ knitr::include_graphics("Figures/SPST.JPG")
 
 ---
 
-# Top down approach
-
-```{r , echo=FALSE, fig.align = 'center',message=FALSE, out.width = '50%', out.height = '50%'}
-knitr::include_graphics("Figures/TD.JPG")
-```
-
-$$
-G=
-\begin{pmatrix}
-p_{1} & 0 & 0 & 0 & 0 & 0 & 0\\
-p_{2} & 0 & 0 & 0 & 0 & 0 & 0\\
-p_{3} & 0 & 0 & 0 & 0 & 0 & 0\\
-p_{4} & 0 & 0 & 0 & 0 & 0 & 0
-\end{pmatrix}
-$$
----
-
-# Bottom up approach
-
-```{r , echo=FALSE, fig.align = 'center',message=FALSE, out.width = '50%', out.height = '50%'}
-knitr::include_graphics("Figures/BU.JPG")
-```
-
-$$
-G=
-\begin{pmatrix}
-0 & 0 & 0 & 1 & 0 & 0 & 0\\
-0 & 0 & 0 & 0 & 1 & 0 & 0\\
-0 & 0 & 0 & 0 & 0 & 1 & 0\\
-0 & 0 & 0 & 0 & 0 & 0 & 1
-\end{pmatrix}
-$$
-
----
-
 # Hierarchical forecasting workflow
 
 * All series at all levels of the hierarchical structure individually forecast based on **Mean, NAIVE, SNAIVE, ETS, and ARIMA methods**.
@@ -800,6 +765,41 @@ $$y_{t}=\phi_{0}+\phi_{1}y_{t-1}+\phi_{2}y_{t-2}+\dots+\phi_{p}y_{t-p}+\epsilon_
 In moving average models, current variable of interest is a linear combination of past forecast errors and current error.
 
 $$y_{t}=\phi_{0}+\theta_{1}\epsilon_{t-1}+\theta_{2}\epsilon_{t-2}+\dots+\theta_{q}\epsilon_{t-q}+\epsilon_{t}$$
+
+---
+
+# Top down approach
+
+```{r , echo=FALSE, fig.align = 'center',message=FALSE, out.width = '50%', out.height = '50%'}
+knitr::include_graphics("Figures/TD.JPG")
+```
+
+$$
+G=
+\begin{pmatrix}
+p_{1} & 0 & 0 & 0 & 0 & 0 & 0\\
+p_{2} & 0 & 0 & 0 & 0 & 0 & 0\\
+p_{3} & 0 & 0 & 0 & 0 & 0 & 0\\
+p_{4} & 0 & 0 & 0 & 0 & 0 & 0
+\end{pmatrix}
+$$
+---
+
+# Bottom up approach
+
+```{r , echo=FALSE, fig.align = 'center',message=FALSE, out.width = '50%', out.height = '50%'}
+knitr::include_graphics("Figures/BU.JPG")
+```
+
+$$
+G=
+\begin{pmatrix}
+0 & 0 & 0 & 1 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 1
+\end{pmatrix}
+$$
 
 ---
 
