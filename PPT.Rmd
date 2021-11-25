@@ -792,6 +792,20 @@ knitr::include_graphics("Figures/PP23V2.JPG")
 
 ---
 
+# Forecast Reconciliation
+
+#### $h$ step ahead reconciled forecasts at time $t: \hspace{0.1in} \tilde{y}_{t}{(h)}$ 
+
+#### $h$ step ahead base forecasts at time $t: \hspace{0.1in} \hat{y}_{t}{(h)}$ 
+
+```{r , echo=FALSE, fig.align = 'center',message=FALSE, out.width = '40%', out.height = '40%'}
+knitr::include_graphics("Figures/AUTO2.JPG")
+```
+
+* Role of $G$ is different from approach to approach.
+
+---
+
 # Top down approach
 
 ```{r , echo=FALSE, fig.align = 'center',message=FALSE, out.width = '50%', out.height = '50%'}
@@ -827,40 +841,25 @@ $$
 
 ---
 
-# Forecast Reconciliation
-
-#### $h$ step ahead reconciled forecasts at time $t: \hspace{0.1in} \tilde{y}_{t}{(h)}$ 
-
-#### $h$ step ahead base forecasts at time $t: \hspace{0.1in} \hat{y}_{t}{(h)}$ 
-
-```{r , echo=FALSE, fig.align = 'center',message=FALSE, out.width = '40%', out.height = '40%'}
-knitr::include_graphics("Figures/AUTO2.JPG")
-```
-
-* Role of $G$ is different from approach to approach.
-
----
-
-# Trace minimization approach (MinT)
+## Trace minimization approach (MinT)
 
 $$G=(S^{'}W_{h}^{-1}S)^{-1} S^{'}W_{h}^{-1}$$
 
-* Error variance of base forecasts
+* Error variance of base forecasts: $Var(y_{t+h}- \hat{y}_{t}(h))=W_{h}$
 
-$$Var(y_{t+h}- \hat{y}_{t}(h))=W_{h}$$
-#### Alternatives for $W_{h}$
+##### Alternatives for $W_{h}$
 
 * Ordinary least square estimator
 
-#### $$W_{h}=k_{h}I$$
+##### $$W_{h}=k_{h}I$$
 
 * Weighted least square estimator using structure of hierarchy
 
-#### $$W_{h}=k_{h} \Lambda$$
+##### $$W_{h}=k_{h} \Lambda$$
 
 * Weighted least square estimator using shrinkage estimator
 
-#### $$W_{h}=k_{h} \hat{W}_{1,D}^{*}$$
+##### $$W_{h}=k_{h} \hat{W}_{1,D}^{*}$$
 
 ---
 
