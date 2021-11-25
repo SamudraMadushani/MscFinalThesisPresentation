@@ -768,6 +768,30 @@ $$y_{t}=\phi_{0}+\theta_{1}\epsilon_{t-1}+\theta_{2}\epsilon_{t-2}+\dots+\theta_
 
 ---
 
+```{r ,echo=FALSE, out.width = '100%', out.height = '100%',fig.height=9, fig.width=16}
+knitr::include_graphics("Figures/PP22V1.JPG")
+```
+
+---
+
+```{r ,echo=FALSE, out.width = '100%', out.height = '100%',fig.height=9, fig.width=16}
+knitr::include_graphics("Figures/PP23V1.JPG")
+```
+
+---
+
+```{r ,echo=FALSE, out.width = '100%', out.height = '100%',fig.height=9, fig.width=16}
+knitr::include_graphics("Figures/PP22V2.JPG")
+```
+
+---
+
+```{r ,echo=FALSE, out.width = '100%', out.height = '100%',fig.height=9, fig.width=16}
+knitr::include_graphics("Figures/PP23V2.JPG")
+```
+
+---
+
 # Top down approach
 
 ```{r , echo=FALSE, fig.align = 'center',message=FALSE, out.width = '50%', out.height = '50%'}
@@ -800,30 +824,6 @@ G=
 0 & 0 & 0 & 0 & 0 & 0 & 1
 \end{pmatrix}
 $$
-
----
-
-```{r ,echo=FALSE, out.width = '100%', out.height = '100%',fig.height=9, fig.width=16}
-knitr::include_graphics("Figures/PP22V1.JPG")
-```
-
----
-
-```{r ,echo=FALSE, out.width = '100%', out.height = '100%',fig.height=9, fig.width=16}
-knitr::include_graphics("Figures/PP23V1.JPG")
-```
-
----
-
-```{r ,echo=FALSE, out.width = '100%', out.height = '100%',fig.height=9, fig.width=16}
-knitr::include_graphics("Figures/PP22V2.JPG")
-```
-
----
-
-```{r ,echo=FALSE, out.width = '100%', out.height = '100%',fig.height=9, fig.width=16}
-knitr::include_graphics("Figures/PP23V2.JPG")
-```
 
 ---
 
