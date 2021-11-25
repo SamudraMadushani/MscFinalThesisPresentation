@@ -334,4 +334,38 @@ FBVZW7<-pcsW %>%
 FBVZW7<-FBVZW7+ theme(legend.position = "bottom",legend.box = "vertical")+
   labs(colour = NULL)
 
+LCP<-DIS_DataDengueTEST %>%
+  dplyr::filter(is_aggregated(Districts)& is_aggregated(Province))%>%autoplot(Counts,col="blue")+labs(x="Week",title = "Sri Lanka-The lowest number of crossing points")+
+  ggeasy::easy_center_title()+guides(size = FALSE)
 
+HCP<-DataDengueTEST%>%dplyr::filter(Districts=="Ampara")%>%autoplot(Counts,col="blue")+labs(x="Week",title = "Ampara-The highest number of crossing points")+
+     ggeasy::easy_center_title()+guides(size = FALSE)
+HCP<-HCP+ geom_hline(yintercept=1,color = "red", size=1)
+LCP<-LCP+ geom_hline(yintercept=454.5,color = "red", size=1)
+CP<-(HCP/LCP)
+
+HACF<-DataDengueTEST%>%dplyr::filter(Districts=="Colombo")%>%autoplot(Counts,col="blue")+labs(x="Week",title = "Colombo-The Highest acf1")+
+ggeasy::easy_center_title()+guides(size = FALSE)
+
+LACF<-DataDengueTEST%>%dplyr::filter(Districts=="Mullaitivu")%>%autoplot(Counts,col="blue")+labs(x="Week",title = "Mullaitivu-The Lowest acf1")+
+ggeasy::easy_center_title()+guides(size = FALSE)
+
+Colombo.ts<-as.ts(Colombo$Counts,start=c(2006,52),frequency=52)
+ACFH<-ggAcf(Colombo.ts)+labs(title = "ACF plot of Colombo district")+
+  ggeasy::easy_center_title()+guides(size = FALSE)
+
+Mullaitivu.ts<-as.ts(Mullaitivu$Counts,start=c(2006,52),frequency=52)
+ACFL<-ggAcf(Mullaitivu.ts)+labs(title = "ACF plot of Mullaitivu district")+
+  ggeasy::easy_center_title()+guides(size = FALSE)
+
+#(HACF|ACFH)/(LACF|ACFL)
+
+ACFV<-(LACF/HACF)
+
+HE<-DataDengueTEST%>%dplyr::filter(Districts=="Mannar")%>%autoplot(Counts,col="blue")+labs(x="Week",title = "Mannar-The Highest entropy")+
+  ggeasy::easy_center_title()+guides(size = FALSE)
+
+LE<-DataDengueTEST%>%dplyr::filter(Districts=="Monaragala")%>%autoplot(Counts,col="blue")+labs(x="Week",title = "Monaragala-The Lowest entropy")+
+  ggeasy::easy_center_title()+guides(size = FALSE)
+
+#(HE/LE)
